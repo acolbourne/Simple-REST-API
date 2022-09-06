@@ -1,0 +1,27 @@
+{
+  "name": "simple-rest-api",
+  "version": "1.0.0",
+  "description": "Simple REST API",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -H 0.0.0.0",
+    "lint": "next lint",
+    "prettier": "prettier -write ."
+  },
+  "keywords": [],
+  "author": "Andrew Colbourne<andrewcolbourne025@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "mongoose": "^6.5.4",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-next": "^12.2.5",
+    "prettier": "^2.7.1"
+  }
+}
