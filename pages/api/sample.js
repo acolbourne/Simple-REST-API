@@ -1,4 +1,3 @@
-import mongoose from 'mongoose';
 import connectMongoDB from '../../utils/connectMongoDB';
 import Sample from '../../models/sample.model';
 
@@ -9,8 +8,6 @@ export default async ( req, res ) => {
 
     // -> Take the request type and route it around a loop called 'method'.
     const { method } = req;
-
-    console.log ( method );
 
     // -> For each request type, take the action prescribed. If anything unexpected happens, return an error.
     // -> Loop all of the processes through a try/catch block.
@@ -23,7 +20,9 @@ export default async ( req, res ) => {
                 
                 const Results = await Sample.find ( { } );
 
-                res.status ( 200 ).json ( { success: true, payload: Results } );
+                const Results_Array = Object.values ( Results );
+
+                res.status ( 200 ).json ( { success: true, payload: Results_Array } );
 
             } catch ( error ) {
 
